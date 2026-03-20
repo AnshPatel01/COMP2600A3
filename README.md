@@ -25,15 +25,18 @@ When the Foomatic routing engine queries the API, it receives a lightweight JSON
   "estimated_weather_delay_minutes": "integer",
   "recommendation": "string"
 }
+```
 
 ## Example
 
 **Request:**
+
 ```
 GET /routes/plow-status?highway_number=QH-1&vehicle_traction_type=winter-tires
 ```
 
 **Response:**
+
 ```json
 {
   "safe_to_travel": true,
