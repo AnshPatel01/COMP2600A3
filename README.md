@@ -17,9 +17,14 @@ Because we are utilizing two endpoints, they share two required parameters to ac
 
 ## Resources
 
-When the Foomatic routing engine queries the API, it receives a lightweight JSON object designed for quick parsing by our automated systems. 
+When the Foomatic routing engine queries the API, it receives a lightweight JSON object representing the route's weather and safety status. The data model for this **RouteStatus** resource is formatted as follows:
 
-The primary resource returned contains three properties: a `safe_to_travel` boolean indicating if the route is passable, an `estimated_weather_delay_minutes` integer to help management adjust customer delivery windows, and a brief `recommendation` string providing specific instructions for the driver.
+```json
+{
+  "safe_to_travel": "boolean",
+  "estimated_weather_delay_minutes": "integer",
+  "recommendation": "string"
+}
 
 ## Example
 
